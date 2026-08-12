@@ -1,0 +1,35 @@
+# Training and evaluation requirements (train.py, test.py, daily_finetune.py,
+# utilities/). For the paper's figures only, analysis/requirements.txt is enough
+# and needs neither a GPU nor PyTorch.
+#
+# Versions are pinned to the environment the released results were produced in
+# (CUDA 12.1). Install with:
+#   pip install -r requirements.txt --extra-index-url https://download.pytorch.org/whl/cu121
+# For a CPU-only install, drop the +cu121 suffixes and use the default index.
+
+torch==2.5.1+cu121
+torchvision==0.20.1+cu121
+
+numpy==1.26.3
+scipy==1.14.1
+scikit-learn==1.6.0
+pandas==3.0.1
+matplotlib==3.10.8
+seaborn==0.13.2
+tqdm==4.67.1
+tensorboard==2.18.0
+
+# Augmentation pipeline used by the dataset class. 2.x is required: the
+# CoarseDropout call in datasets/OpenSetPigs/OpenSetPigs.py uses the renamed
+# `fill` argument (`fill_value` in 1.x).
+albumentations==2.0.8
+
+# OpenCV: install exactly one of these. opencv-python-headless is the right
+# choice on a server or in CI; opencv-python if you also want GUI windows.
+opencv-python-headless==4.11.0.86
+# opencv-python==4.10.0.84
+
+# Known good ranges, if you already have a working scientific Python stack:
+#   torch>=2.1  numpy>=1.23  scipy>=1.9  scikit-learn>=1.2  pandas>=1.5
+#   matplotlib>=3.6  seaborn>=0.12  albumentations>=2.0 (needs the
+#   num_holes_range / fill CoarseDropout API)

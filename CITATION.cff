@@ -1,0 +1,167 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite both the software and the accompanying paper."
+title: "Long-term Tracking of Individual Pigs Through Re-identification"
+abstract: >-
+  Livestock production can benefit from automated monitoring of animal health, welfare and productivity. However, continuous
+  longitudinal tracking of commercial pigs using Computer Vision (CV) is hindered by their uniform appearance, the need to avoid
+  physical identification tags in most commercial settings, and ongoing changes in appearance due to growth and environmental
+  factors such as dirt. This study addresses longitudinal visual tracking of commercial pigs through an open-set Re-Identification
+  (ReID) framework based on deep metric learning, designed to maintain the identities of visually uniform group-housed pigs over
+  extended periods without relying on artificial or natural marks or other devices. A ResNet50 backbone was fine-tuned with a
+  combined ArcFace and semi-hard triplet loss on an extended large-scale longitudinal pig dataset.
+  To mitigate embedding drift, a multi-anchor voting algorithm was introduced to match daily cluster centroids against a rolling
+  bank of historical representations of individual animal identities. A custom synthetic dirt augmentation pipeline was developed
+  to prevent overfitting to transient patterns of animal dirt contamination. Performance was evaluated across three input modalities:
+  Instance Segmentation (IS), Oriented Bounding Boxes (OBB), and Axis-Aligned Bounding Boxes (AABB). During an 18-day
+  open-set evaluation, the multi-anchor framework reached a mean tracking accuracy of 88.0% with IS images, outperforming a
+  sequential day-to-day baseline (54.6%). Importantly, this work demonstrates that open-set visual ReID can maintain individual
+  identity continuity in visually uniform, previously unseen commercial pigs for up to 18 days, substantially extending ReID beyond
+  short-clip identification towards practical longitudinal tracking. OBB performance was comparable to IS masks while offering
+  lower computational cost, whereas AABB degraded to 51.4% attributed to background noise. Synthetic dirt augmentation proved
+  essential for the tightly cropped modalities, as otherwise longitudinal tracking was reduced to 56.5% for IS images.
+  Model interpretability using an adapted GradCAM verified that the network differentiated individuals based on stable anatomical
+  traits, such as the head, shoulder, and rear, rather than transient artefacts. These findings indicate that ReID of visually homogeneous
+  pigs is feasible without artificial marking or physical tags in comparable farm environments, representing a step toward
+  non-invasive, continuous welfare monitoring in precision livestock farming.
+type: software
+license: MIT
+authors:
+  - family-names: "Bernotas"
+    given-names: "Gytis"
+    orcid: "https://orcid.org/0000-0002-3418-5758"
+    affiliation: "University of the West of England"
+  
+  - family-names: "Hansen"
+    given-names: "Mark"
+    orcid: "https://orcid.org/0000-0003-4681-6251"
+    affiliation: "University of the West of England"
+
+  - family-names: "Smith"
+    given-names: "Melvyn"
+    orcid: "https://orcid.org/0000-0002-5307-8288"
+    affiliation: "University of the West of England"
+
+  - family-names: "Jack"
+    given-names: "Mhairi"
+    orcid: "https://orcid.org/0000-0002-5764-2827"
+    affiliation: "Scotland's Rural College (SRUC)"
+
+  - family-names: "Baxter"
+    given-names: "Emma"
+    orcid: "https://orcid.org/0000-0003-3370-7371"
+    affiliation: "Scotland's Rural College (SRUC)"
+
+  - family-names: "D'Eath"
+    given-names: "Richard B."
+    orcid: "https://orcid.org/0000-0002-1801-254X"
+    affiliation: "Scotland's Rural College (SRUC)"
+
+version: "1.0.0"
+date-released: "2026-08-12"
+repository-code: "https://github.com/g2-bernotas/pig-reidentification"
+keywords:
+  - animal welfare
+  - computer vision
+  - deep learning
+  - multi-object tracking
+  - pigs
+  - swine
+  - ReID
+  - reidentification
+
+preferred-citation:
+  type: article
+  title: "Long-term Tracking of Individual Pigs Through Re-identification"
+  authors:
+    - family-names: "Bernotas"
+      given-names: "Gytis"
+      orcid: "https://orcid.org/0000-0002-3418-5758"
+      affiliation: "University of the West of England"
+    - family-names: "Hansen"
+      given-names: "Mark"
+      orcid: "https://orcid.org/0000-0003-4681-6251"
+      affiliation: "University of the West of England"
+    - family-names: "Smith"
+      given-names: "Melvyn"
+      orcid: "https://orcid.org/0000-0002-5307-8288"
+      affiliation: "University of the West of England"
+    - family-names: "Jack"
+      given-names: "Mhairi"
+      orcid: "https://orcid.org/0000-0002-5764-2827"
+      affiliation: "Scotland's Rural College (SRUC)"
+    - family-names: "Baxter"
+      given-names: "Emma"
+      orcid: "https://orcid.org/0000-0003-3370-7371"
+      affiliation: "Scotland's Rural College (SRUC)"
+    - family-names: "D'Eath"
+      given-names: "Richard B."
+      orcid: "https://orcid.org/0000-0002-1801-254X"
+      affiliation: "Scotland's Rural College (SRUC)"
+  journal: "Smart Agricultural Technology"
+  year: 2026
+  doi: ""
+
+references:
+  - type: data
+    title: "Long-term Tracking of Individual Pigs Through Re-identification"
+    authors:
+    - family-names: "Bernotas"
+      given-names: "Gytis"
+      orcid: "https://orcid.org/0000-0002-3418-5758"
+      affiliation: "University of the West of England"
+    - family-names: "Hansen"
+      given-names: "Mark"
+      orcid: "https://orcid.org/0000-0003-4681-6251"
+      affiliation: "University of the West of England"
+    - family-names: "Smith"
+      given-names: "Melvyn"
+      orcid: "https://orcid.org/0000-0002-5307-8288"
+      affiliation: "University of the West of England"
+    - family-names: "Jack"
+      given-names: "Mhairi"
+      orcid: "https://orcid.org/0000-0002-5764-2827"
+      affiliation: "Scotland's Rural College (SRUC)"
+    - family-names: "Baxter"
+      given-names: "Emma"
+      orcid: "https://orcid.org/0000-0003-3370-7371"
+      affiliation: "Scotland's Rural College (SRUC)"
+    - family-names: "D'Eath"
+      given-names: "Richard B."
+      orcid: "https://orcid.org/0000-0002-1801-254X"
+      affiliation: "Scotland's Rural College (SRUC)"
+    year: 2026
+    doi: "10.1016/j.atech.2026.101967"
+    url: "https://zenodo.org/records/20415926"
+    notes: "Longitudinal pig dataset used to train and evaluate this code as well as trained models."
+
+
+  - type: article
+    title: "Visual Identification of Individual Holstein Friesian Cattle via Deep Metric Learning"
+    authors:
+      - family-names: "Andrew"
+        given-names: "William"
+      - family-names: "Gao"
+        given-names: "Jing"
+      - family-names: "Campbell"
+        given-names: "Neill"
+      - family-names: "Dowsey"
+        given-names: "Andrew W."
+      - family-names: "Burghardt"
+        given-names: "Tilo"
+    year: 2020
+    journal: "arXiv preprint arXiv:2006.09205"
+    notes: "The cattle codebase this repository is derived from."
+  - type: conference-paper
+    title: "Learning Discriminative Embeddings for Object Recognition on-the-fly"
+    authors:
+      - family-names: "Lagunes-Fortiz"
+        given-names: "Miguel"
+      - family-names: "Damen"
+        given-names: "Dima"
+      - family-names: "Mayol-Cuevas"
+        given-names: "Walterio"
+    year: 2019
+    collection-title: "2019 International Conference on Robotics and Automation (ICRA)"
+    start: 2932
+    end: 2938
+    notes: "Original triplet network implementation."

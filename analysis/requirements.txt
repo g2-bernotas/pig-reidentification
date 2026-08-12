@@ -1,0 +1,23 @@
+# Evaluation only: evaluate_tracking.py, evaluate_enrolment.py,
+# make_synthetic_npz.py. No GPU, no PyTorch, no image data needed —
+# these run straight off the released .npz embedding files.
+#
+# Versions pinned to the environment the released results were produced in.
+# The scripts are not sensitive to these; the floors under "known good range"
+# below are enough if you already have a working scientific Python stack.
+
+numpy==1.26.3
+pandas==3.0.1
+scipy==1.14.1
+scikit-learn==1.6.0
+matplotlib==3.10.8
+seaborn==0.13.2
+tqdm==4.67.1
+
+# Known good range (verified on numpy 2.4 / pandas 3.0 / scikit-learn 1.8 /
+# scipy 1.17 as well, i.e. both numpy 1.x and 2.x):
+#   numpy>=1.23  pandas>=1.5  scipy>=1.9  scikit-learn>=1.2
+#   matplotlib>=3.6  seaborn>=0.12
+#
+# tqdm is optional — it only drives the progress bar, and the scripts fall
+# back to silent iteration if it is missing.

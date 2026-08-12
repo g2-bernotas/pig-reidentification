@@ -1,0 +1,18 @@
+# Additional requirements for extract_embeddings.py (needs a checkpoint and
+# the image crops). Everything else runs from requirements.txt alone.
+-r requirements.txt
+
+# CUDA 12.1 build, matching the training environment. Install with:
+#   pip install -r analysis/requirements-extract.txt \
+#       --extra-index-url https://download.pytorch.org/whl/cu121
+# For CPU-only inference, drop the +cu121 suffixes and use the default index;
+# then run the script with --device cpu.
+torch==2.5.1+cu121
+torchvision==0.20.1+cu121
+
+# OpenCV: install exactly one of these. opencv-python-headless is the right
+# choice on a server or in CI; opencv-python if you also want the GUI windows.
+# Having both installed leaves which build `import cv2` resolves to up to
+# install order.
+opencv-python-headless==4.11.0.86
+# opencv-python==4.10.0.84

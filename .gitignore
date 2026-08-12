@@ -1,0 +1,42 @@
+## OS files
+*.DS_Store
+Thumbs.db
+
+## Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.ipynb_checkpoints/
+
+## Editors / local tooling
+.vscode/
+.idea/
+.claude/
+
+## Model weights, embeddings and generated noise fields
+## (released through the data/weights archives, not through git)
+*.pkl
+*.pth
+*.npz
+*.npy
+
+## Generated figures and reports
+*.png
+*.pdf
+*.html
+*.csv
+!analysis/configs/*.csv
+
+## Run outputs
+output/
+runs/
+results/
+ft_models/
+**/tensorboard/
+
+## Dataset (downloaded separately - see README.md)
+data/
+datasets/**/images/
+datasets/**/splits/

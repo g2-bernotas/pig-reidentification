@@ -1,0 +1,17 @@
+{
+  "_comment": [
+    "Maps a display name to an embedding .npz produced by extract_embeddings.py.",
+    "Names matching the paper's modalities (Ins. Segm., OBB, AABB and their (ND)",
+    "variants, plus Baseline) keep their published colours in the figures; any",
+    "other name gets an automatically assigned colour.",
+    "Paths are relative to wherever you run the script from."
+  ],
+  "experiments": {
+    "Ins. Segm.": "results/embeddings/inssegm_muck_openset.npz",
+    "Ins. Segm. (ND)": "results/embeddings/inssegm_nomuck_openset.npz",
+    "OBB": "results/embeddings/obb_muck_openset.npz",
+    "OBB (ND)": "results/embeddings/obb_nomuck_openset.npz",
+    "AABB": "results/embeddings/aabb_muck_openset.npz",
+    "AABB (ND)": "results/embeddings/aabb_nomuck_openset.npz"
+  }
+}
