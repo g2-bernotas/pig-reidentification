@@ -7,7 +7,7 @@ long-term, non-invasive visual identification of individual pigs.
 **_Long-term Tracking of Individual Pigs Through Re-identification_**  
 **Authors:** Gytis Bernotas, Mark Hansen, Melvyn Smith, Mhairi Jack, Emma Baxter, Richard B. D’Eath  
 **Status:** Under review  
-**DOI / arXiv:** Will be added upon publication
+**DOI / arXiv:** Will be added upon publication, preliminary is [here](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7314685).
 
 ### Data
 **Dataset DOI:** [10.5281/zenodo.20415925](https://doi.org/10.5281/zenodo.20415925)
